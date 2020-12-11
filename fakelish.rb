@@ -2,16 +2,24 @@
 class Fakelish < Formula
   desc "Fake English word generator"
   homepage "https://github.com/nwtgck/go-fakelish"
-  version "0.1.11"
+  version "0.1.12"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.11/fakelish-0.1.11-darwin-amd64.tar.gz"
-    sha256 "2e548f706704fcf23479e3a44e87ab479dba5bd660bc46ae3398cac71c89c65c"
+    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.12/fakelish-0.1.12-darwin-amd64.tar.gz"
+    sha256 "76dc1af8e65a07546b808b36c06fafafc6131772d8660992ff051a13170b9fe3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.11/fakelish-0.1.11-linux-amd64.tar.gz"
-    sha256 "1d2ad1373dacfc04367c427b892389070c97f7c1fb89d1b98983ea8bbe34ad1b"
+    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.12/fakelish-0.1.12-linux-amd64.tar.gz"
+    sha256 "573a3656c58bd420909e6a42882d89d90fc2b3469a4a3e838a0902476eebb17f"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.12/fakelish-0.1.12-linux-armv6.tar.gz"
+    sha256 "2cbfbda86014fdc23263e553f5f6ba56b881e3c389d06bce85c9597933acbe79"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.12/fakelish-0.1.12-linux-arm64.tar.gz"
+    sha256 "a59fe18bd10fbf2569a7c3d7855a20d04a2ba77889fe290dfad9c99972300d64"
   end
 
   def install

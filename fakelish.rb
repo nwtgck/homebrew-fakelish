@@ -2,16 +2,16 @@
 class Fakelish < Formula
   desc "Fake English word generator"
   homepage "https://github.com/nwtgck/go-fakelish"
-  version "0.1.8"
+  version "0.1.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.8/fakelish-0.1.8-darwin-amd64.tar.gz"
-    sha256 "7307b3595a7d2c440228259d0cc3ebee6b4f3afda003c1efbafcf68fb7364724"
+    url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.9/fakelish-0.1.9-darwin-amd64.tar.gz"
+    sha256 "cf4be935202ab09aa6bf92339b17065a78696cbd2a9173adcb606d43da157436"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.8/fakelish-0.1.8-linux-amd64.tar.gz"
-      sha256 "150d4d0afdc46c934e51fdc20d6e7271bbc0d182d5a9c6a0b639068c757f49c6"
+      url "https://github.com/nwtgck/go-fakelish-release-test/releases/download/v0.1.9/fakelish-0.1.9-linux-amd64.tar.gz"
+      sha256 "c345e74664d951a75aec2f7af65f803e3dc01ace99905f89278ff037639db04a"
     end
   end
 
